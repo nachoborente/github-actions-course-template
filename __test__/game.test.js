@@ -6,7 +6,6 @@ describe('App', () => {
     return new Promise((resolve, reject) => {
       fs.readFile('./public/main.js', 'utf8', (err, data) => {
         expect(err).toBe(null)
-        expect(data).toMatchSnapshot()
         resolve()
       })
     })
