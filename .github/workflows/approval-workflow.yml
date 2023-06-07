@@ -1,9 +1,10 @@
 name: Team approval workflow
-on: pull_request_review
+on: pull_request_merge
 
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
+    if: ${{ contains(github.event.head_commit.message, 'NachoAddLabel') }}
     steps:
       - name: Label approved pull requests
         uses: abinoda/label-when-approved-action@1.0.5
