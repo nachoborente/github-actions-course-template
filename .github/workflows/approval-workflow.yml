@@ -1,6 +1,9 @@
 name: Team approval workflow
-on: pull_request_merge
-
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
