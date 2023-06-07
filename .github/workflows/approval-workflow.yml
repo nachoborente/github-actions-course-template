@@ -7,7 +7,7 @@ on:
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.head_commit.message, 'NachoAddLabel') }}
+    if: ${{ !contains(github.event.head_commit.message, 'NachoAddLabel') }}
     steps:
       - name: Label approved pull requests
         uses: abinoda/label-when-approved-action@1.0.5
