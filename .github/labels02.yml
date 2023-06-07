@@ -1,0 +1,14 @@
+head:
+    - Test1:
+        - master
+    - Test02:
+        - nachoborente-patch-3
+base:
+    - Test03:
+        - master
+    - Test04:
+        - nachoborente-patch-3
+
+files:
+    - .github/**/*
+        - dotgithub
